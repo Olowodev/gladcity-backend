@@ -25,6 +25,7 @@ const Jobrouter = router.post('/jobapplication', async (req, res) => {
         from: req.body.emailTo,
         to: req.body.emailTo,
         subject: "Job Application",
+        replyTo: req.body.email,
         // text: "test",
         attachments: [
             {
@@ -70,6 +71,7 @@ const Inforouter = router.post('/info', async (req, res) => {
         from: req.body.emailTo,
         to: req.body.emailTo,
         subject: "Enquiries",
+        replyTo: req.body.email,
         // text: "test",
         html: `<h2>New Enquiry from ${req.body.name}</h2>
                 </br>
